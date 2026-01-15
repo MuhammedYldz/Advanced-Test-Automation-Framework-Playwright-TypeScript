@@ -1,0 +1,23 @@
+image: node:18
+
+stages:
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+test_automation:
+  stage: test
+  script:
+    - npm ci
+    - npx playwright install --with-deps chromium
+    - npm test
+  artifacts:
+    when: always
+    paths:
+      - test-results/
+    expire_in: 1 week
+  variables:
+    BASE_URL: 'https://www.automationexercise.com'
+    ENV: 'staging'

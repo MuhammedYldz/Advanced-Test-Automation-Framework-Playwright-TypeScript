@@ -1,0 +1,37 @@
+# Azure Pipelines configuration for Playwright + Cucumber + TypeScript
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm ci
+  displayName: 'Install Dependencies'
+
+- script: |
+    npx playwright install --with-deps chromium
+  displayName: 'Install Playwright Browsers'
+
+- script: |
+    npm test
+  displayName: 'Run Cucumber Tests'
+  env:
+    # Set environment variables here or in the pipeline settings
+    BASE_URL: 'https://www.automationexercise.com'
+    ENV: 'staging'
+
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: 'test-results/results.xml'
+    # Note: Cucumber JSON/HTML report is configured in cucumber.js. 
+    # For Azure, you might want a JUnit formatter for Cucumber if you want integration.

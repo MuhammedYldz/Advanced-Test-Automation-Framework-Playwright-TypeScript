@@ -1,0 +1,19 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"As a QA Engineer
+  I want to verify that the UI layout hasn't changed unexpectedly
+  So that the application looks consistent","1177","Verify Login Page Layout","","2026-01-15","passed","2026-01-15","","","",""
+"As a user
+  I want to be able to log in to the application
+  So that I can access my account details","4381","Failed login with invalid credentials","","2026-01-15","passed","2026-01-15","","","",""
+"As a tester
+  I want to intercept and mock network requests
+  So that I can test edge cases like API failures without relying on the real backend","2976","Handle Login API Failure (500 Server Error)","","2026-01-15","passed","2026-01-15","","","",""
+"As a user
+  I want to be able to log in to the application
+  So that I can access my account details","5009","Successful login with valid credentials","","2026-01-15","passed","2026-01-15","","","",""
+"As a user
+  I want to be able to log in to the application
+  So that I can access my account details","1985","Login with empty fields","","2026-01-15","passed","2026-01-15","","","",""
+"As a user
+  I want to be able to log in to the application
+  So that I can access my account details","2567","Failed login with invalid credentials","","2026-01-15","passed","2026-01-15","","","",""
