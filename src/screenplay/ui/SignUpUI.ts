@@ -1,0 +1,22 @@
+export const SIGNUP_NAME = '[data-qa="signup-name"]';
+export const SIGNUP_EMAIL = '[data-qa="signup-email"]';
+export const SIGNUP_BUTTON = '[data-qa="signup-button"]';
+
+export const GENDER_MR = '#id_gender1';
+export const GENDER_MRS = '#id_gender2';
+export const PASSWORD = '[data-qa="password"]';
+export const DAYS = '[data-qa="days"]';
+export const MONTHS = '[data-qa="months"]';
+export const YEARS = '[data-qa="years"]';
+export const FIRST_NAME = '[data-qa="first_name"]';
+export const LAST_NAME = '[data-qa="last_name"]';
+export const COMPANY = '[data-qa="company"]';
+export const ADDRESS1 = '[data-qa="address"]';
+export const ADDRESS2 = '[data-qa="address2"]';
+export const COUNTRY = '[data-qa="country"]';
+export const STATE = '[data-qa="state"]';
+export const CITY = '[data-qa="city"]';
+export const ZIPCODE = '[data-qa="zipcode"]';
+export const MOBILE_NUMBER = '[data-qa="mobile_number"]';
+export const CREATE_ACCOUNT_BUTTON = '[data-qa="create-account"]';
+export const ACCOUNT_CREATED_HEADER = '[data-qa="account-created"]';
